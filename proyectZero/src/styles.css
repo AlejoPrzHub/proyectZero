@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Poppins:ital@1&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Andika', sans-serif;
+}
+
+.body.light :root
+{
+  --primary-color1: white;
+  --primary-color2: white;
+  --secundary-color1: white;
+  --secundary-color2: white;
+  --secundary-color3: #902923;
+}
+:root
+{
+    font-size: 15px;
+
+    /* colors */
+  --primary-color1: #222222;
+  --primary-color2: #F18F01;
+  --secundary-color1: #757575;
+  --secundary-color2: #2C2C2C;
+  --secundary-color3: #902923;
+
+    /* transition */
+  --tran-01: all 0.2s ease;
+  --tran-02: all 0.3s ease;
+  --tran-03: all 0.4s ease;
+  --tran-04: all 0.5s ease;
+    
+}
+
+a {
+    text-decoration: none !important;
+  }
+  
+  a:link {
+    color: inherit;
+  }
+  
+  a:visited {
+    color: inherit;
+  }
+  
+  a:focus {
+    border-bottom: inherit;
+    background: inherit;
+  }
+  
+  a:hover {
+    border-bottom: inherit;
+    background: inherit;
+  }
+  
+  a:active {
+    background: inherit;
+    color: inherit;
+  }
+  
+  input {
+    border: none;
+  }
+  
+  
+  input:focus {
+    outline: none;
+    border: 0;
+  }
