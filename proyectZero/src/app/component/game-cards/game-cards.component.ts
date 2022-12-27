@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class GameCardsComponent {
 
+  flipped= true
+
+  flip()
+  {
+    this.flipped = !this.flipped
+    console.log(this.flipped)
+  }
 }

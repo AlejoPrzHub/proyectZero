@@ -1,0 +1,61 @@
+.header-main
+{
+    height: 10vh;
+    z-index: 99;
+    background: var(--primary-color1);
+    color: var(--secundary-color1);
+}
+
+.header-body
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-ul
+{
+    display: flex;
+    margin-inline-end: 2em;
+    gap: 1.5em;
+}
+.header-li a
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--tran-04);
+    width: 100%;
+}
+
+.header-li a:hover
+{
+    background: var(--primary-color2);
+    color:var(--primary-color1)
+
+}
+
+.header-li .icon
+{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    font-size: 1.5rem;
+    min-width: 60px;
+    cursor: pointer;
+}
+
+.header-li
+{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile
+{
+    background-color: white;
+}

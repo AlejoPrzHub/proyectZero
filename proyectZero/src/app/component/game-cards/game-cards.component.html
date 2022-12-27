@@ -1,1 +1,15 @@
-<p>game-cards works!</p>
+<div class="card" >
+    <div class="card __inner" (click)="flip()" [ngClass]=" flipped == true ? 'isflipped' : 'card__inner'">
+        <div class="card__face card__face--front"> 
+            <!-- <img src="https://duet-cdn.vox-cdn.com/thumbor/0x0:1177x663/640x427/filters:focal(589x332:590x333):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24079071/Launch_Key_Art.png" alt=""> -->
+            <h2>Shooter</h2>
+        </div>
+
+        <div class="card__face card__face--back">
+            <h2 class="card__header">Overwatch 2</h2>
+            <h2 class="card__content">Game description <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam autem molestiae quasi aspernatur animi maiores libero eos. Impedit ullam veritatis repellendus cum aperiam dolor accusantium totam, iure vel. Ratione, hic?*20</h2>
+            <h2 class="card__body">Game publisher </h2>
+            <input type="button" value="Lets play">
+        </div>
+    </div>
+</div>
