@@ -7,14 +7,27 @@
     box-sizing: border-box;
     font-family: 'Andika', sans-serif;
 }
-
-.body.light :root
+body
 {
-  --primary-color1: white;
-  --primary-color2: white;
-  --secundary-color1: white;
-  --secundary-color2: white;
-  --secundary-color3: #902923;
+  background-color: var(--primary-color1);
+}
+
+body::-webkit-scrollbar
+{
+    width: 0.8em;
+}
+
+body::-webkit-scrollbar-track
+{
+
+    border: none;
+    background: var(--secundary-color2);
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: var(--secundary-color1);
+    border-radius: 6px;
 }
 :root
 {

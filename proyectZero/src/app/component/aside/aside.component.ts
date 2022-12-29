@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AsideServiceService } from '../../shared/aside-service.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aside',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AsideComponent {
 
+  constructor(public asideService :AsideServiceService, private router:Router )
+  {}
   booleano = true;
   show = true;
 
@@ -16,8 +20,10 @@ export class AsideComponent {
     console.log(this.booleano)
   }
 
-  close()
+  open()
   {
     this.show = !this.show
+    this.asideService.isExtend = !this.asideService.isExtend
+    console.log(this.asideService);
   }
 }

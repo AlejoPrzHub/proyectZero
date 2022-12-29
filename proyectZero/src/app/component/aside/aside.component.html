@@ -11,7 +11,7 @@
                 <span class="profession">subTitulo</span>
             </div>
         </div>
-        <i class='bx bx-chevron-right toggle' (click)="close()"></i>
+        <i class='bx bx-chevron-right toggle' (click)="open()"></i>
 
     </header>
     <div class="menu-bar">
@@ -20,25 +20,25 @@
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-home-alt icon' ></i>
-                        <span class="text nav-text">Home</span>
+                        <span class="text nav-text" routerLink="/home">Home</span>
                     </a>
                 </li>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-joystick icon' ></i>
-                        <span class="text nav-text">Games</span>
+                        <span class="text nav-text" routerLink="/games">Games</span>
                     </a>
                 </li>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-chat icon'></i>
-                        <span class="text nav-text">Social</span>
+                        <span class="text nav-text" routerLink="/login">Social</span>
                     </a>
                 </li>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-user-pin icon' ></i>
-                        <span class="text nav-text">Profile</span>
+                        <span class="text nav-text" routerLink="/profile">Profile</span>
                     </a>
                 </li>
             </ul>
