@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top  header-main">
+<!-- <nav class="navbar fixed-top  header-main">
     <div class="container-fluid header-body">
         <div class="filters">
             <select name="filter_type" class="filter" #filter_type>
@@ -64,5 +64,110 @@
                 <i class='bx bx-user icon'></i>
             </li>
           </ul>
+    </div>
+  </nav> -->
+
+  <!-- header2 -->
+
+
+  <nav class="navbar navbar-dark bg-dark fixed-top ">
+    <div class="container-fluid navbar-main">
+    <!--=========================== header ============================-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="header-center">
+                    <a class="header-center_content text-secondary" routerLink="/home">Home</a>
+                    <a class="text-secondary" routerLink="/games">Games</a>
+                    <a class="text-secondary" routerLink="/login" *ngIf="isLoggedService.isLogged == true">Social</a>
+                    <a class="text-secondary" routerLink="/profile" *ngIf="isLoggedService.isLogged == true">Profile</a>
+      </div>
+
+      <div class="header-center" *ngIf="isLoggedService.isLogged == false">
+        <a class="header-lat text-secondary " routerLink="/login" >Log In</a>
+        <a class="header-lat text-secondary " routerLink="/login" >Join Free</a>
+      </div>
+
+      <ul class="nav header-ul" *ngIf="isLoggedService.isLogged == true">
+        <li class="nav-item header-li">
+            <i class='bx bx-bell icon text-secondary'></i>
+        </li>
+        <li class="nav-item header-li profile text-secondary">
+            <i class='bx bx-user icon'></i>
+        </li>
+      </ul>
+
+      <!-- ==========================aside================================ -->
+      <div class="offcanvas offcanvas-start bg-dark sidebar" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+        <div class="offcanvas-header sidebar-header">
+            <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close"><span class="navbar-toggler-icon"></span></button>
+                <span class="image">
+                    <img src="../../../assets/iconmonstr-gamepad-17-240.png" alt="logo">
+                </span>
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">ProyectZero</h5>
+        </div>
+
+        <div class="offcanvas-body sidebar sidebar-body">
+          
+                <div class="menu-bar">
+                    <div class="menu">
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a routerLink="/home">
+                                    <i class='bx bx-home-alt icon text-secondary' ></i>
+                                    <span class="text nav-text text-secondary" >Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a routerLink="/games">
+                                    <i class='bx bx-joystick icon text-secondary' ></i>
+                                    <span class="text nav-text text-secondary" >Games</span>
+                                </a>
+                            </li>
+                            <li class="nav-link" *ngIf="isLoggedService.isLogged == true">
+                                <a routerLink="/login">
+                                    <i class='bx bx-chat icon text-secondary'></i>
+                                    <span class="text nav-text text-secondary" >Social</span>
+                                </a>
+                            </li>
+                            <li class="nav-link" *ngIf="isLoggedService.isLogged == true">
+                                <a routerLink="/profile">
+                                    <i class='bx bx-user-pin icon text-secondary' ></i>
+                                    <span class="text nav-text text-secondary" >Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bottom-content">
+                        <li class="">
+                            <a routerLink="/home" *ngIf="isLoggedService.isLogged == false">
+                                <i class='bx bx-log-in icon text-secondary' ></i>
+                                <span class="text nav-text text-secondary">Log-in</span>
+                            </a>
+                            <a routerLink="/home" *ngIf="isLoggedService.isLogged == true">
+                                <i class='bx bx-log-out icon text-secondary' ></i>
+                                <span class="text nav-text text-secondary" (click)="signOff()">Log-out</span>
+                            </a>
+                        </li>
+                        <li class="mode">
+                            <div class="moon-sun">
+                                <i  *ngIf="!booleano" class='bx bx-moon icon moon text-secondary' ></i>
+                                <i  *ngIf="booleano" class='bx bx-sun icon sun text-secondary' ></i>
+                            </div>
+                            <span  *ngIf="booleano" class="mode-text text text-secondary">Light Mode</span>
+                            <span  *ngIf="!booleano" class="mode-text text text-secondary">Dark Mode</span>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" (click)='swap()'>
+                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                              </div>
+                        </li>
+                    </div>
+                </div>
+            
+        </div>
+      </div>
     </div>
   </nav>

@@ -9,7 +9,7 @@
 }
 body
 {
-  background-color: var(--primary-color1);
+  background-color: white;
 }
 
 body::-webkit-scrollbar
@@ -35,8 +35,10 @@ body::-webkit-scrollbar-thumb
 
     /* colors */
   --primary-color1: #222222;
-  --primary-color2: #F18F01;
-  --secundary-color1: #757575;
+  --primary-color2: #20a4f3;
+  /* #F18F01 */
+  --secundary-color1: white; 
+    /* #757575 */
   --secundary-color2: #2C2C2C;
   --secundary-color3: #902923;
 

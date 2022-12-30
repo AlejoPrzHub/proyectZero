@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IsLoggedService } from '../../shared/is-logged.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  booleano = true;
+
+  constructor(public isLoggedService :IsLoggedService, private router:Router )
+  {}
+
+  swap()
+  {
+    this.booleano = !this.booleano
+    console.log(this.booleano)
+  }
+
+  signOff()
+  {
+    this.isLoggedService.isLogged = !this.isLoggedService.isLogged;
+  }
 }

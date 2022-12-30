@@ -1,24 +1,70 @@
 .games-main
 {
-    width: calc(144% - 250px) ;
-    min-height: 90vh;
-    background-color: var(--primary-color1);
-    margin: 0;
-    
-    margin-top: 10vh;
-    margin-left: 250px;
-    transition: var(--tran-04);
-
+    width: 100% ;
+    min-height: calc(100vh - 40px);
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
-    
+    margin-top: 40px;
+}
+
+.games-main_content
+{
+    width: 90%;
+    height: 100px;
+    margin-top: 40px;
+}
+
+.games
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    gap: 0.2em;
+}
+
+
+/* ============filter =============0*/
+
+.filters
+{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 1em;
     
 }
 
-.close
+.filter
 {
-    width: calc(144% - 90px);
-    margin-left: 90px;
-    transition: var(--tran-04);
+    color: var(--secundary-color1);
+    border: none;
+    padding: 0.3em;
+    cursor: pointer;
+    outline: 0;
+    width: 190px;
+}
+
+.filter:hover
+{
+    color: white;
+    transition: var(--tran-03)
+}
+
+.filter::-webkit-scrollbar
+{
+    width: 0.4em;
+}
+
+.filter::-webkit-scrollbar-track
+{
+    border: none;
+    background: var(--secundary-color2);
+}
+
+.filter::-webkit-scrollbar-thumb
+{
+    background-color: var(--secundary-color1);
+    border-radius: 6px;
 }
