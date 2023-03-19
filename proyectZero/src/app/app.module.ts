@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { NgOptimizedImage } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +15,7 @@ import { GamesComponent } from './pages/games/games.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { GameCardsComponent } from './component/game-cards/game-cards.component';
 import { ButtonComponent } from './component/button/button.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,11 +27,15 @@ import { ButtonComponent } from './component/button/button.component';
     GamesComponent,
     ProfileComponent,
     GameCardsComponent,
-    ButtonComponent
+    ButtonComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgOptimizedImage,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     position: relative;
     width: 400px;
-    height: 320px;
+    height: 280px;
 }
 
 .card2 div
@@ -39,10 +39,14 @@
 {
     display: flex;
     color: var(--secundary-color1);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 50%;
     padding: 0.4em;
     font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -65,6 +69,8 @@
     background-color: var(--secundary-color1);
     border-radius: 25px;
     font-weight: 600;
+    min-width: 90px;
+    text-align: center;
     
 }
 
@@ -93,8 +99,12 @@
 
 .card__content
 {
+    max-height: 100px;
     width: 100%;
     font-size: 1rem;
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .card__content span
@@ -108,14 +118,11 @@
     font-size: 1.3rem; 
 }
 
-.card__input
+.card__body span
 {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.2em;
-    background-color: var(--primary-color2);
+    color:  var(--primary-color2);
+    font-size:1.5rem;
 }
-
 
 /* hover */
 .card2:hover .front
@@ -132,4 +139,108 @@
 {
     margin-left: 1.2em;
     font-size: 1.5rem;
+}
+
+/* Button */
+
+.btn-24,
+.btn-24 *,
+.btn-24 :after,
+.btn-24 :before,
+.btn-24:after,
+.btn-24:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-24 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: var(--primary-color2);
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1rem;
+  font-weight: 900;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(var(--primary-color2), #fff);
+  padding: 0;
+  text-transform: uppercase;
+  width: 170px;
+  height: 50px;
+}
+.btn-24:disabled {
+  cursor: default;
+}
+.btn-24:-moz-focusring {
+  outline: auto;
+}
+.btn-24 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-24 [hidden] {
+  display: none;
+}
+.btn-24 {
+  --background: var(--primary-color2);
+  background: none;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-24 span {
+  display: block;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.btn-24:after,
+.btn-24:before {
+  --tilt: 20px;
+  background: #fff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: -webkit-clip-path 0.2s ease;
+  transition: clip-path 0.2s ease;
+  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+  width: 100%;
+  z-index: -1;
+}
+.btn-24:after {
+  --thickness: 5px;
+  background: var(--background);
+  height: calc(100% - var(--thickness) * 2);
+  left: var(--thickness);
+  top: var(--thickness);
+  width: calc(100% - var(--thickness) * 2);
+}
+.btn-24:hover span {
+  transform: translateX(-20px);
+}
+.btn-24:hover:after,
+.btn-24:hover:before {
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
 }

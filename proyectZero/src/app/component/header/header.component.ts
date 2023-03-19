@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
   booleano = true;
+  tab = 0;
 
   constructor(public isLoggedService :IsLoggedService, private router:Router )
   {}

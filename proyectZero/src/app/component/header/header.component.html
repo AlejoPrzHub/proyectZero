@@ -78,10 +78,10 @@
       </button>
 
       <div class="header-center">
-                    <a class="header-center_content text-secondary" routerLink="/home">Home</a>
-                    <a class="text-secondary" routerLink="/games">Games</a>
-                    <a class="text-secondary" routerLink="/login" *ngIf="isLoggedService.isLogged == true">Social</a>
-                    <a class="text-secondary" routerLink="/profile" *ngIf="isLoggedService.isLogged == true">Profile</a>
+                    <a class="text-secondary" tab="0" (click)="this.tab = 0" [ngClass]="{active:!this.tab || this.tab === 0}" routerLink="/home">Home</a>
+                    <a class="text-secondary" (click)="this.tab = 1" [ngClass]="{ active: this.tab === 1}" routerLink="/games">Games</a>
+                    <a class="text-secondary" (click)="this.tab = 2" [ngClass]="{ active: this.tab === 2}" routerLink="/login" *ngIf="isLoggedService.isLogged == true">Social</a>
+                    <a class="text-secondary" (click)="this.tab = 3" [ngClass]="{ active: this.tab === 3}" routerLink="/profile" *ngIf="isLoggedService.isLogged == true">Profile</a>
       </div>
 
       <div class="header-center" *ngIf="isLoggedService.isLogged == false">
@@ -91,7 +91,7 @@
 
       <ul class="nav header-ul" *ngIf="isLoggedService.isLogged == true">
         <li class="nav-item header-li">
-            <i class='bx bx-bell icon text-secondary'></i>
+            <i class='bx bx-bell text-secondary campana'></i>
         </li>
         <li class="nav-item header-li profile text-secondary">
             <i class='bx bx-user icon'></i>
@@ -115,25 +115,25 @@
                     <div class="menu">
                         <ul class="menu-links">
                             <li class="nav-link">
-                                <a routerLink="/home">
+                                <a routerLink="/home" (click)="this.tab = 0">
                                     <i class='bx bx-home-alt icon text-secondary' ></i>
                                     <span class="text nav-text text-secondary" >Home</span>
                                 </a>
                             </li>
                             <li class="nav-link">
-                                <a routerLink="/games">
+                                <a routerLink="/games" (click)="this.tab = 1">
                                     <i class='bx bx-joystick icon text-secondary' ></i>
                                     <span class="text nav-text text-secondary" >Games</span>
                                 </a>
                             </li>
                             <li class="nav-link" *ngIf="isLoggedService.isLogged == true">
-                                <a routerLink="/login">
+                                <a routerLink="/login" (click)="this.tab = 2">
                                     <i class='bx bx-chat icon text-secondary'></i>
                                     <span class="text nav-text text-secondary" >Social</span>
                                 </a>
                             </li>
                             <li class="nav-link" *ngIf="isLoggedService.isLogged == true">
-                                <a routerLink="/profile">
+                                <a routerLink="/profile" (click)="this.tab = 3">
                                     <i class='bx bx-user-pin icon text-secondary' ></i>
                                     <span class="text nav-text text-secondary" >Profile</span>
                                 </a>

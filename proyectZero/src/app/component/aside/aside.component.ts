@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AsideServiceService } from '../../shared/aside-service.service'
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AsideComponent {
 
-  constructor(public asideService :AsideServiceService, private router:Router )
+  constructor( private router:Router )
   {}
   booleano = true;
   show = true;
@@ -20,10 +19,5 @@ export class AsideComponent {
     console.log(this.booleano)
   }
 
-  open()
-  {
-    this.show = !this.show
-    this.asideService.isExtend = !this.asideService.isExtend
-    console.log(this.asideService);
-  }
+  
 }
