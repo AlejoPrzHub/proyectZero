@@ -81,7 +81,7 @@
                     <a class="text-secondary" tab="0" (click)="this.tab = 0" [ngClass]="{active:!this.tab || this.tab === 0}" routerLink="/home">Home</a>
                     <a class="text-secondary" (click)="this.tab = 1" [ngClass]="{ active: this.tab === 1}" routerLink="/games">Games</a>
                     <a class="text-secondary" (click)="this.tab = 2" [ngClass]="{ active: this.tab === 2}" routerLink="/login" *ngIf="isLoggedService.isLogged == true">Social</a>
-                    <a class="text-secondary" (click)="this.tab = 3" [ngClass]="{ active: this.tab === 3}" routerLink="/profile" *ngIf="isLoggedService.isLogged == true">Profile</a>
+                    <a class="text-secondary" (click)="this.tab = 3" [ngClass]="{ active: this.tab === 3}" routerLink="/gamePage" *ngIf="isLoggedService.isLogged == true">Profile</a>
       </div>
 
       <div class="header-center" *ngIf="isLoggedService.isLogged == false">

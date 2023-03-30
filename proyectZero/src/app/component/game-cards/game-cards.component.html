@@ -1,6 +1,7 @@
 <div class="card2" >
+    
         <div class="front"> 
-            <img width="100%" [src]= "games.thumbnail" alt="">
+            <img  [ngSrc]= "games.thumbnail" width="400" height="230" priority="true">
             <aside class="card__header">{{games.title}}</aside>
             <aside class="card__face--front_right">
                 <span> {{games.genre}} </span>
@@ -16,8 +17,9 @@
             <aside class="card__content"><span> Game description </span><br> 
                 {{games.short_description}}</aside>
             <aside class="card__content"><span> Game Publisher </span><br>{{games.publisher}} </aside>
-            <button class="btn-24"><span>Game Page</span></button>
+            <button class="btn-24" (click)="GamePage(games.id)" ><span>Game Page</span> </button>
 
         </div>
     
+        <link rel="preconnect" href="https://www.freetogame.com">
 </div>

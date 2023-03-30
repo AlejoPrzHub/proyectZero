@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input , inject} from '@angular/core';
 import { Games } from './../../models/games.model'
+import { HttpClient } from '@angular/common/http';
+import { AsideServiceService } from 'src/app/shared/aside-service.service';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -9,30 +11,14 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class GameCardsComponent {
 
-  // title: string;
-  // id: number;
-  // thumbnail: string;
-  // short_description: string;
-  // game_url: string;
-  // genre: string;
-  // platform: string;
-  // publisher: string;
-  // developer: string;
-  // release_data: string;
+  http = inject(HttpClient);
+  @Input() games!:Games
+ 
+  constructor(public SpecificGameService:AsideServiceService){}
 
-  @Input() games!:Games 
-  // = 
-  // {
-  //   id:0,
-  //   title:'',
-  //   thumbnail:'',
-  //   short_description: '',
-  //   game_url:'',
-  //   genre:'',
-  //   platform:'',
-  //   publisher:'',
-  //   developer:'',
-  //   release_data:'',
-  // }
-  ;
+
+  GamePage(id:number)
+  {
+      this.SpecificGameService.specificGame(id);
+  }
 }

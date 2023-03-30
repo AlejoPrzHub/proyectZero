@@ -5,6 +5,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -16,6 +17,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { GameCardsComponent } from './component/game-cards/game-cards.component';
 import { ButtonComponent } from './component/button/button.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { GamePageComponent } from './pages/game-page/game-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     GameCardsComponent,
     ButtonComponent,
     FilterPipe,
+    GamePageComponent,
   ],
   imports: [
     BrowserModule,
