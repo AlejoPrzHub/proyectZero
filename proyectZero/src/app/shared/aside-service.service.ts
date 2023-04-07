@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class AsideServiceService {
   public game:Games;
 
-  constructor(private http:HttpClient, private router:Router) {}
+  constructor(private http:HttpClient, private router:Router) {
+  }
 
 
   specificGame(id:number)
@@ -23,10 +24,7 @@ export class AsideServiceService {
     };
     
     this.http.get<Games>(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`, options)
-      .subscribe(response => {this.game = response});
-
-    this.router.navigate(["/gamePage"])
-    console.log(this.game)
+      .subscribe(response => {this.game = response; this.router.navigate(["/gamePage"]) });
   }
   
 }

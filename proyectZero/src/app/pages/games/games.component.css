@@ -50,7 +50,7 @@
 
 .searchBar
 {
-    width: min(60vw,50%);
+    width: 80%;
     height: 100%;
 }
 
@@ -126,18 +126,14 @@
     
 }
 
-
-.options:hover
+.options
 {
-    background-color: grey;
-    color: white;
-
+    cursor: pointer;
 }
-
-
-
-
-
+.list
+{
+    cursor: pointer;
+}
 
 .icon
 {
@@ -146,7 +142,7 @@
 
 .iconBox
 {
-    padding: 0.1em;
+    padding: 0.4em;
     border-radius: 6px;
     cursor: pointer;
     background-color: var(--primary-color2);

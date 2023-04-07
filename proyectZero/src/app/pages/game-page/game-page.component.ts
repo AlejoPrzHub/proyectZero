@@ -12,8 +12,10 @@ import { Router } from '@angular/router';
 export class GamePageComponent {
 
   http = inject(HttpClient);
-  specificgame= this.SpecificGameService.game;
-  constructor(public SpecificGameService:AsideServiceService,private router:Router){}
+  specificgame = this.SpecificGameService.game;
+  constructor(public SpecificGameService:AsideServiceService,private router:Router){
+    if(!SpecificGameService.game) router.navigate(['/home'])
+  }
 
   redirect()
   {

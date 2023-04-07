@@ -8,62 +8,34 @@
                 </div>
               
                 <div class="filterSpace">
-                    <div class="inactiveFilter" (click)="ngOnInit()">All Games</div>
-                    <div class="activeFilter" *ngFor="let tag of GamesTags; index as i">{{GamesTags[i]}}</div>
-                    <!-- <div class="activeFilter">3d</div>
-                    <div class="activeFilter">Action</div>
-                    <div class="activeFilter">Anime</div>
-                    <div class="activeFilter">Card</div>
-                    <div class="activeFilter">Fantasy</div>
-                    <div class="activeFilter">Fighting</div>
-                    <div class="activeFilter">First Person View</div>
-                    <div class="activeFilter">Flight</div>
-                    <div class="activeFilter">MMORPG</div>
-                    <div class="activeFilter">Martial Arts</div>
-                    <div class="activeFilter">Military</div>
-                    <div class="activeFilter">Moba</div>
-                    <div class="activeFilter">Open World</div>
-                    <div class="activeFilter">Permadeath</div>
-                    <div class="activeFilter">Pixel</div>
-                    <div class="activeFilter">Racing</div>
-                    <div class="activeFilter">Sci-Fi</div>
-                    <div class="activeFilter">Shooter</div>
-                    <div class="activeFilter">Social</div>
-                    <div class="activeFilter">Space</div>
-                    <div class="activeFilter">Sports</div>
-                    <div class="activeFilter">Strategy</div>
-                    <div class="activeFilter">Superhero</div>
-                    <div class="activeFilter">Survival</div>
-                    <div class="activeFilter">Tank</div>
-                    <div class="activeFilter">Third Person View</div>
-                    <div class="activeFilter">Zombie</div> -->
+                    <div [ngClass]="{activeFilter:this.selectedCheckboxes.length === 0, inactiveFilter: this.selectedCheckboxes.length > 0}" (click)="fetchGames()">All Games</div>
+                    <div class="activeFilter" *ngFor="let checkbox of selectedCheckboxes"> {{checkbox}} </div>
+                    
+                    
                 </div>
 
 
                 <!-- FILTER BUTTON -->
                 <div class="filterImg">
                     <div class="btn-group">
-                        <button class="btn dropdown iconBox " type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" data-bs-offset="-40,16">
-                            <i class='bx bx-filter icon '></i>
+                        <button class="btn dropdown-toggle iconBox" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" data-bs-offset="-45,16">
+                            Filter By
                         </button>
                         <ul class="dropdown-menu filterOptions">
+                            <li class="list" (click)="SortGamesByAlphabet()" >Sort By Alphabet</li>
+                            <li><hr class="dropdown-divider"></li>
                         <li >
                                 <div class="form-check options" *ngFor="let tag of GamesTags; index as i">
-                                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                                <input class="form-check-input " type="checkbox" name="{{GamesTags[i]}}" value="" id="flexCheckDefault" 
+                                (change)="onCheckboxChange($event)">
                                 <label class="form-check-label" for="flexCheckDefault">
                                 {{GamesTags[i]}}
                                 </label>
                                 </div>
                             
                         </li>
-
-                        
                         </ul>
                       </div>
-
-                    
-                    <i class='bx bx-expand-vertical icon iconBox' (click)="SortGamesByAlphabet()" ></i>
-                    
                 </div>
         </div>
 

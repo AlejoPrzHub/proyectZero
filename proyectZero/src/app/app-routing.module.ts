@@ -9,7 +9,7 @@ import { GamePageComponent } from './pages/game-page/game-page.component';
 const routes: Routes = 
 [
   {path:"home",component:HomeComponent},
-  {path:'', redirectTo:'/home', pathMatch:'full'},
+  {path:'', redirectTo:'home', pathMatch:'full'},
   {path:"games",component:GamesComponent},
   {path:"login",component:LoginComponent},
   {path:"profile",component:ProfileComponent},

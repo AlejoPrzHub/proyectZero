@@ -8,8 +8,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: Games[], title = ''): Games[] 
   { 
-    if (title == '') {return value}
-    else {return value.filter(game => game.title.includes(title))};
+    if (title == '') return value
+    else return value.filter(game => game.title.includes(title));
   }
-
 }
