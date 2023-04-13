@@ -18,6 +18,7 @@ import { GameCardsComponent } from './component/game-cards/game-cards.component'
 import { ButtonComponent } from './component/button/button.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { GamePageComponent } from './pages/game-page/game-page.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { GamePageComponent } from './pages/game-page/game-page.component';
     ButtonComponent,
     FilterPipe,
     GamePageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
